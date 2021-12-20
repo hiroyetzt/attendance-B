@@ -1,23 +1,10 @@
 <% provide(:title, "Sign up") %>
+<% provide(:class_text, "signup") %>
+<% provide(:button_text, "新規登録") %>
 <h1>ユーザー登録</h1>
+
 <div class="row">
   <div class="col-md-10 col-md-offset-1">
-    <%= form_with(model: @user, local: true) do |f| %>
-      <%= render 'shared/error_massages'%>
-      
-      <%= f.label :name, class: "lable-signup" %>
-      <%= f.text_field :name, class: "form-control" %>
-       
-      <%= f.label :email, class: "lable-signup" %>
-      <%= f.email_field :email, class: "form-control" %>
-      
-      <%= f.label :password, class: "lable-signup" %>
-      <%= f.password_field :password, class: "form-control" %>
-
-      <%= f.label :password_confirmation, class: "lable-signup" %>
-      <%= f.password_field :password_confirmation, class: "form-control" %>
-      
-      <%= f.submit "新規作成", class: "btn btn-block btn-primary btn-signup" %>
-    <% end %>
+    <%= render 'shared/form' %>
   </div>
 </div>
